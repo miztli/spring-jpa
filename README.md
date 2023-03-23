@@ -30,6 +30,8 @@ Allow multiple entities batches config:
 Group update statements together and send them in one go
 
 ```properties
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.inserts=true
 spring.jpa.properties.hibernate.order_updates=true
 spring.jpa.properties.hibernate.batch_versioned_data=true
 ```
@@ -47,6 +49,8 @@ spring.jpa.properties.hibernate.format_sql=true
 ```properties
 logging.level.org.hibernate.SQL=DEBUG
 logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+logging.level.org.hibernate.stat=DEBUG
+logging.level.org.hibernate.engine.internal=INFO
 ```
 
 ##### When using JDBCTemplate
